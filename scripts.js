@@ -1,20 +1,20 @@
 const ENTER_KEYCODE = 13;
 
 document.addEventListener('DOMContentLoaded', () => {
-  const form = document.querySelector('.form'); /* defining global variables */
+  const form = document.querySelector('.form');
   const items = document.querySelector('.items');
   text.init(form, items);
 });
 
 const text = (() => {
-  let itemText, itemList, items, newText; /*local scope to the variable text only and children */
+  let itemText, itemList, items, newText;
 
   function init(_form, _items) {
-    items = _items; /* assigning value to items */
+    items = _items;
     itemList = _items.querySelectorAll(".item");
     console.log(_form, _items, itemList);
 
-    _form.addEventListener('submit', formHandler); /* assigning functionalitity to the specific object we're targeting */
+    _form.addEventListener('submit', formHandler);
 
     for (var i = 0; i < itemList.length; i++) {
       console.log("LIST ITEM:", itemList[i]);
@@ -100,7 +100,7 @@ const text = (() => {
     newButton.appendChild(document.createTextNode("Eyða"));
     newListItem.appendChild(newButton);
 
-    items.appendChild(newListItem); /*takes everything we have created and inserts into the ul*/
+    items.appendChild(newListItem);
     return console.log("Add Me", value);
   }
 
