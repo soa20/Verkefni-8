@@ -5,10 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const items = document.querySelector('.items');
   text.init(form, items);
 });
-
 const text = (() => {
   let itemText, itemList, items, newText;
-
+  
   function init(_form, _items) {
     items = _items;
     itemList = _items.querySelectorAll(".item");
